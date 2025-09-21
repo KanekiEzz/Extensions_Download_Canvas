@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Canvas</title>
+  <style>
+    body {
+      width: 280px;
+      padding: 16px;
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .header p {
+      margin: 4px 0 0 0;
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .download-btn {
+      width: 100%;
+      padding: 12px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .download-btn:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-1px);
+    }
+
+    .download-btn:active {
+      transform: translateY(0);
+    }
+
+    .download-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .info {
+      margin-top: 12px;
+      font-size: 11px;
+      opacity: 0.8;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .shortcut {
+      margin-top: 8px;
+      padding: 6px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 4px;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    .status {
+      margin-top: 12px;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🎨 Canvas Downloader</h1>
+    <p>Extract and merge canvas images</p>
+  </div>
+  
+  <button id="downloadBtn" class="download-btn">
+    📥 Download Canvas
+  </button>
+  
+  <div class="info">
+    Finds all canvas elements and merges them into a single PNG image
+  </div>
+  
+  <div class="shortcut">
+    💡 Quick shortcut: <strong>Ctrl+Shift+D</strong>
+  </div>
+
+  <div id="status" class="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
